@@ -1,0 +1,51 @@
+{
+    "name": "changelog/version-semver",
+    "description": "TBD",
+    "keywords": [
+        "changelog",
+        "version",
+        "parse",
+        "git"
+    ],
+    "homepage": "https://github.com/changelog-page/version-semver",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "changelog/version": "^0.1.0",
+        "composer/semver": "^3.2",
+        "phar-io/version": "^3.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "pestphp/pest": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Changelog\\Version\\SemVer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Changelog\\Version\\SemVer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix ./"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
